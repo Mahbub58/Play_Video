@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color_dd"
+    tools:context=".AudioPlay.inerLayout.PlayList.PlayListFragment">
+
+
+
+    <LinearLayout
+        android:id="@+id/ii"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:elevation="2dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/squer_desgin_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save To .."
+            android:textAlignment="center"
+            android:id="@+id/tt"
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:gravity="center_horizontal" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tt"
+
+            android:text="Create"
+            android:id="@+id/createPlayList"
+            android:background="@color/transperent"
+            android:layout_alignParentRight="true"/>
+
+        <EditText
+            android:id="@+id/create_playListName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tt"
+            android:inputType="textCapCharacters"
+            android:layout_toLeftOf="@+id/createPlayList" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="7dp"
+        android:layout_height="match_parent"
+        android:id="@+id/bottomFragmentPlayListItem"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/AppTheme.Squer.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/done"
+        android:layout_below="@+id/ii"
+        android:text="Done"
+        tools:ignore="NotSibling" />
+
+</RelativeLayout>

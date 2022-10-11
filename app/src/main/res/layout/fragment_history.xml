@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color_dd"
+    tools:context=".HistoryLibrary.HistoryFragment">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:background="@color/background_color_dd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        tools:targetApi="lollipop">
+
+        <include layout="@layout/toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:elevation="1dp"
+            android:layout_marginTop="6dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:id="@+id/re"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:text="Recent"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/clearAll"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/btn_transperent_squer"
+                    android:drawableLeft="@drawable/ic_baseline_delete_forever_24"
+                    android:drawableTint="@color/black_white"
+                    android:gravity="center_vertical"
+                    android:text="Clear"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:scrollbars="horizontal"
+                android:numColumns="auto_fit"
+                android:columnWidth="110dp"
+                android:horizontalSpacing="2dp"
+                android:verticalSpacing="15dp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="190dp"
+                android:id="@+id/recyclerViewHistory"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/AppTheme.Squer.Button"
+                android:id="@+id/favourite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_favorite_24"
+                android:gravity="center"
+                android:drawableTint="@color/red_gray"
+                android:text="Audio"
+                android:paddingLeft="20dp"
+                android:drawablePadding="10dp"
+                android:textAlignment="viewStart"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:elevation="1dp"
+                android:textStyle="bold"
+                android:layout_weight=".1"
+                tools:ignore="RtlCompat" />
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/AppTheme.Squer.Button"
+                android:id="@+id/favouriteVideo"
+                android:layout_weight=".1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_favorite_24"
+                android:gravity="center"
+                android:drawableTint="@color/red_gray"
+                android:text="Video"
+                android:drawablePadding="10dp"
+                android:textAlignment="viewStart"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:elevation="1dp"
+                android:textStyle="bold"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+            <LinearLayout
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                android:background="@color/background_color_dd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_marginTop="2dp"
+                    android:padding="10dp"
+                    android:id="@+id/ree"
+                    android:background="@drawable/squer_desgin_background"
+                    android:elevation="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/TextAppearance.AppCompat.Title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Play List"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:scrollbars="vertical"
+                    android:numColumns="auto_fit"
+                    android:background="@color/white"
+                    android:elevation="6dp"
+                    android:horizontalSpacing="2dp"
+                    android:verticalSpacing="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/recyclerViewPlayList"/>
+        </LinearLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="7dp"
+        android:id="@+id/hrootContainer">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="1"
+            android:id="@+id/guidline_below_fOpen"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/guidline_below_fOpen" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

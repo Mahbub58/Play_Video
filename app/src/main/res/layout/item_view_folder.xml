@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="160dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/videoImage"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:layout_margin="7dp"
+        app:shapeAppearanceOverlay="@style/roundedImageView"
+        android:src="@drawable/image_1" />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/VideoTitel"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="fdsfhjjj hfsdkjfhsk fsjdfhskjjafd"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/totalItem"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="20"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="normal"
+        android:maxLines="1"
+        android:gravity="center_horizontal" />
+</LinearLayout>

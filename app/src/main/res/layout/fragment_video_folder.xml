@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Folder.VideoFolder.VideoFolderFragment">
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:numColumns="auto_fit"
+       android:columnWidth="110dp"
+       android:horizontalSpacing="5dp"
+       android:verticalSpacing="15dp"
+
+       android:layout_marginRight="5dp"
+       android:layout_marginLeft="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/recyclerViewVideoFolder"/>
+
+</RelativeLayout>

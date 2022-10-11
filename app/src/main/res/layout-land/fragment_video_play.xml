@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/videoRootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/black"
+    android:gravity="center"
+    tools:context=".VideoPlay.VideoPlayFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidLineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidLineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidLineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidLineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guidLineBottom"
+        app:layout_constraintEnd_toEndOf="@+id/guidLineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidLineLeft"
+        app:layout_constraintTop_toTopOf="@id/guidLineTop">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:fitsSystemWindows="false"
+            android:focusable="true"
+            android:foregroundGravity="center"
+            android:keepScreenOn="true"
+            android:saveEnabled="true"
+            android:screenReaderFocusable="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="-16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/videoBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_shedow">
+
+        <ImageButton
+            android:id="@+id/videoDown"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_keyboard_arrow_down_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <TextView
+            android:id="@+id/songName"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:text="Song Name"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@+id/videoDown"
+            app:layout_constraintRight_toLeftOf="@id/video_more"
+            tools:ignore="MissingConstraints" />
+
+
+        <ImageButton
+            android:id="@+id/video_more"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_more_vert_white_24"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <ImageButton
+            android:id="@+id/videoPausePlay"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/ic_baseline_pause_24"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <ImageButton
+            android:id="@+id/video_privious"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/videoPausePlay"
+            app:srcCompat="@drawable/ic_baseline_skip_previous_24"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <ImageButton
+            android:id="@+id/video_Next"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/videoPausePlay"
+            app:srcCompat="@drawable/ic_baseline_skip_next_24"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <ImageButton
+            android:id="@+id/forwordSkeep"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="10dp"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/video_Next"
+            app:srcCompat="@drawable/ic_baseline_forward_10_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageButton
+            android:id="@+id/backwordSkeep"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/video_privious"
+            app:srcCompat="@drawable/ic_baseline_replay_10_24"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <ImageButton
+            android:id="@+id/videoFullscreen"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/video_Next"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/ic_baseline_fullscreen_exit_24"
+            tools:ignore="VectorDrawableCompat" />
+
+
+        <TextView
+            android:id="@+id/duration_running"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="3:15:00"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/video_Next"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3:15:00"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/video_Next"
+            app:layout_constraintRight_toLeftOf="@id/videoFullscreen" />
+
+
+        <ImageButton
+            android:id="@+id/videoScreensize"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/ic_baseline_aspect_ratio_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <ImageButton
+            android:id="@+id/videoScreenLock"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/ic_baseline_lock_open_24"
+            tools:ignore="VectorDrawableCompat" />
+
+        <SeekBar
+            android:id="@+id/seekBarVideo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progressBackgroundTint="@color/grey"
+            android:progressTint="@color/red"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/video_Next"
+            app:layout_constraintLeft_toRightOf="@+id/duration_running"
+            app:layout_constraintRight_toLeftOf="@+id/duration" />
+
+
+
+        <!--Video Button scroll view-->
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidLineScrolBtnViiew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <HorizontalScrollView
+            android:id="@+id/videoPlayHorizanalScrolView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true"
+            android:scrollbars="horizontal"
+            app:layout_constraintLeft_toLeftOf="@+id/guidLineScrolBtnViiew"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/songName">
+
+
+
+
+            <LinearLayout
+                android:id="@+id/likeDisLikeView"
+                android:layout_width="match_parent"
+                android:fitsSystemWindows="true"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintTop_toBottomOf="@id/videoDetails_title">
+
+                <ImageButton
+                    android:id="@+id/scrolViewBtn"
+                    style="@style/AppTheme.ShadowCircule.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:tint="@color/icon_color_videoview"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_chevron_left_24"
+                    tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+                <ImageButton
+                    android:id="@+id/videoAutoPlay"
+                    style="@style/AppTheme.ShadowCircule.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:tint="@color/icon_color_videoview"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_play_disabled_24"
+                    tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+
+
+
+                <ImageButton
+                    android:id="@+id/likeVideo"
+                    style="@style/AppTheme.ShadowCircule.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:tint="@color/icon_color_videoview"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+                    tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+                <ImageButton
+                    android:id="@+id/videoBackground"
+                    style="@style/AppTheme.ShadowCircule.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:tint="@color/icon_color_videoview"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_headset_24"
+                    tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:visibility="visible"
+                        android:id="@+id/videoTimer"
+                        style="@style/AppTheme.ShadowCircule.ImageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:padding="10dp"
+                        android:tint="@color/icon_color_videoview"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_alarm_24"
+                        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+                    <TextView
+                        android:id="@+id/timeView"
+                        android:visibility="invisible"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_circle_shedow_background"
+                        android:text="60.60"
+                        android:paddingBottom="12dp"
+                        android:paddingTop="12dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/white"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:textAlignment="center"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_horizontal" />
+                </RelativeLayout>
+
+
+                <ImageButton
+                    android:id="@+id/videoScreenRotation"
+                    style="@style/AppTheme.ShadowCircule.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:tint="@color/icon_color_videoview"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_screen_rotation_24"
+                    tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+
+
+                <ImageButton
+                    android:id="@+id/videoSaveList"
+                    style="@style/AppTheme.ShadowCircule.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:tint="@color/icon_color_videoview"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_library_add_24"
+                    tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/screenShot"
+                    style="@style/AppTheme.ShadowCircule.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="10dp"
+                    android:tint="@color/icon_color_videoview"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+                    tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:saveEnabled="true"
+        android:id="@+id/fulLockedLayout"
+        android:visibility="invisible">
+        <ImageButton
+            android:id="@+id/videoScreenLocked"
+            style="@style/AppTheme.TransperentCircule.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/ic_baseline_lock_24"
+            tools:ignore="VectorDrawableCompat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

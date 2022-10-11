@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:title=""
+    android:textAlignment="center"
+    android:background="@drawable/toolbar_background"
+    android:elevation="3dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="5dp"
+    app:layout_scrollFlags="scroll|enterAlways"
+    android:gravity="center_horizontal"
+    layout_height=""
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/setting"
+            style="@style/AppTheme.TransperentSquer.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:onClick="setting"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_setting_black" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/pay"
+            style="@style/AppTheme.TransperentSquer.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/setting"
+            android:padding="10dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_credit_card" />
+        <RelativeLayout
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/line"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/pay"/>
+        <TextView
+            android:id="@+id/search"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            style="@style/TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@id/pay"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Search Videos"
+            android:textColor="@color/black"
+            android:textStyle="normal" />
+    </RelativeLayout>
+</androidx.appcompat.widget.Toolbar>
+

@@ -1,0 +1,74 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PlayVideo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+<!--        parent="Theme.MaterialComponents.DayNight.NoActionBar">-->
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/white</item>
+<!--        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>-->
+        <!-- Customize your theme here. -->
+<!--        removing camera noche-->
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="o_mr1">shortEdges</item>
+        <item name="android:windowTranslucentStatus" tools:targetApi="kitkat">true</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
+
+    </style>
+
+
+    <style name="BottomNavigationTheme" parent="Widget.Design.BottomNavigationView">
+        <item name="colorPrimary">#B71C1C</item>
+        <item name="background">@color/background_color_dd</item>
+        <item name="color">#B71C1C</item>
+    </style>
+
+    //image round
+    <style name="roundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    //circle Image
+
+    //progressBar
+
+
+    //button history view//unused
+        <style name="AppTheme.Squer.Button" parent="Widget.AppCompat.Button.Colored">
+            <item name="colorButtonNormal">@color/white</item>
+            <item name="android:textColor">@color/blue</item>
+            <item name="android:background">@drawable/btn_squer_background</item>
+       </style>
+
+    <style name="AppTheme.Squer.ButtonAll" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/white</item>
+        <item name="android:textColor">@color/black_white</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:background">@drawable/btn_squer_trns_red</item>
+    </style>
+
+    <style name="AppTheme.TransperentCircule.ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/btn_transperent_circel</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="AppTheme.ShadowCircule.ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/btn_circle_shedow_background</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="AppTheme.TransperentSquer.ImageButton" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/btn_transperent_squer</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+
+
+
+</resources>

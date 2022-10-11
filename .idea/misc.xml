@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/animation_left.xml" value="0.13072916666666667" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/bottomsheet_background.xml" value="0.1203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/btn_background_circle_shedow.xml" value="0.1203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/btn_circle_shedow_background.xml" value="0.13072916666666667" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/btn_circleber_backgroind.xml" value="0.1203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/btn_pressed.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/btn_squer_background.xml" value="0.13072916666666667" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/btn_squer_trns_red.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/btn_transperent_circel.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/btn_transperent_squer.xml" value="0.15462962962962962" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/circle_background_image.xml" value="0.13072916666666667" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_access_time_24_black_white.xml" value="0.1712962962962963" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2037037037037037" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_aspect_ratio_24.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_clear_24.xml" value="0.1203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_folder_24.xml" value="0.13072916666666667" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_forward_10_24.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.2169230769230769" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_pause_24.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_play_arrow_24.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_replay_10_24.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_screen_lock_portrait_24.xml" value="0.2169230769230769" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_skip_next_24.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_skip_previous_24.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_skip_previous_black_24.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_baseline_trending_flat_24.xml" value="0.12760416666666666" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_credit_card.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/ic_right_arrow_svg.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/line.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/search_edit_text_background.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/squer_desgin_background.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/toolbar_background.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/video_background.xml" value="0.2203125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/video_item_background.xml" value="0.1537037037037037" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/drawable/video_playlist_min_background.xml" value="0.2626953125" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout-land/activity_home.xml" value="0.1" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout-land/fragment_audio_play.xml" value="0.15" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout-land/fragment_video_play.xml" value="0.1" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/activity_home.xml" value="0.11" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/activity_video_play.xml" value="0.11666666666666667" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/audiio_trake_layout.xml" value="0.17074275362318841" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/audio_bottom_sheet_dialog_fragment.xml" value="0.11458333333333333" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/dialog_for_brek_time.xml" value="0.22" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/dialog_get_name.xml" value="0.12092391304347826" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/dialog_item_properties.xml" value="0.1905132192846034" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/dialog_list_audio_trake.xml" value="0.17074275362318841" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/folder_toolbar.xml" value="0.21" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_audio.xml" value="0.25" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_audio_folder.xml" value="0.1" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_audio_play.xml" value="0.1" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_favourite_song.xml" value="0.2" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_folder.xml" value="0.16" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_folder_open.xml" value="0.33" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_history.xml" value="0.25" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_play_list.xml" value="0.25" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_search_video.xml" value="0.18" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_search_view_audio.xml" value="0.13360507246376813" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_video.xml" value="0.22" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_video_details.xml" value="0.15" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_video_folder.xml" value="0.15" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_video_play.xml" value="0.17391304347826086" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/fragment_video_play_potrait_full_screen.xml" value="0.11666666666666667" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/item_music_view.xml" value="0.25" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/item_view_folder.xml" value="0.22" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/item_view_history.xml" value="0.1526268115942029" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/item_view_play_list_item.xml" value="0.25" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/item_view_video.xml" value="0.22" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/item_view_video_from_folder_open.xml" value="0.25" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/item_view_video_potrait.xml" value="0.25" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/toolbar.xml" value="0.21" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/layout/video_details_video_view_item.xml" value="0.15" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/menu/audio_song_menue.xml" value="0.2" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/menu/history_pay_ist_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/menu/song_mor_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/MYWork Linux+Windows/Android Studio Project/Linax work-31-12-20/Project Made/PlayVideo/app/src/main/res/menu/video_play_menu.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

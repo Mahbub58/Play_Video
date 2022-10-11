@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:background="@color/white_shedow"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:text="Sleep Timer"
+            android:textColor="@color/black_white"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/off"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OFF"
+            android:textAlignment="textStart"
+            style="@style/AppTheme.Squer.ButtonAll"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/m15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="15 Minutes"
+            android:textAlignment="textStart"
+            style="@style/AppTheme.Squer.ButtonAll"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/m30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30 Minutes"
+            android:textAlignment="textStart"
+            style="@style/AppTheme.Squer.ButtonAll"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/m45"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="45 Minutes"
+            android:textAlignment="textStart"
+            style="@style/AppTheme.Squer.ButtonAll"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/m60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="60 Minutes"
+            android:textAlignment="textStart"
+            style="@style/AppTheme.Squer.ButtonAll"
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color_dd"
+    tools:context=".VideoDetails.VideoDetailsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:background="@color/background_color_dd"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_scrollFlags="scroll">
+
+            <TextView
+                android:id="@+id/videoDetails_title"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:text="Avenger Infinity War"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:fitsSystemWindows="true"
+                android:fillViewport="true"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/likeDisLikeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/videoDetails_title">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+                        <ImageButton
+                            android:id="@+id/videoAutoPlay"
+                            style="@style/AppTheme.TransperentCircule.ImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_play_disabled_24"
+                            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Auto Play"
+                            android:textColor="@color/black_white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="50dp"
+                        android:orientation="vertical">
+                        <ImageButton
+                            android:id="@+id/likeVideo"
+                            style="@style/AppTheme.TransperentCircule.ImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_favorite_border_24"
+                            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Favourite"
+                            android:textColor="@color/black_white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="50dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageButton
+                            android:id="@+id/videoBackground"
+                            style="@style/AppTheme.TransperentCircule.ImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_headset_24"
+                            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Audio"
+                            android:textColor="@color/black_white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageButton
+                            android:id="@+id/videoSaveList"
+                            style="@style/AppTheme.TransperentCircule.ImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_library_add_24"
+                            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Save"
+                            android:textColor="@color/black_white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageButton
+                            android:id="@+id/videoFullscreenPotrait"
+                            style="@style/AppTheme.TransperentCircule.ImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_screen_lock_portrait_24"
+                            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Full Screen"
+                            android:textColor="@color/black_white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="50dp"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/videoTimer"
+                            style="@style/AppTheme.TransperentCircule.ImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_alarm_24"
+                            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/sleepTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sleep"
+                            android:textColor="@color/black_white"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/screenShot"
+                            style="@style/AppTheme.TransperentCircule.ImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+                            tools:ignore="MissingConstraints,VectorDrawableCompat" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Screenshot"
+                            android:textColor="@color/black_white"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/folder_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/likeDisLikeView"
+                    app:srcCompat="@drawable/ic_baseline_folder_24"
+                    tools:ignore="VectorDrawableCompat" />
+
+                <TextView
+                    android:id="@+id/videoDetails_folder_name"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Folder Name"
+                    android:singleLine="true"
+                    app:layout_constraintLeft_toRightOf="@id/folder_icon"
+                    app:layout_constraintTop_toBottomOf="@id/likeDisLikeView" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/videoDetailsVideoRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:saveEnabled="true"
+        android:elevation="1dp"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbars="vertical"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoDetails_folder_name" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/videoPlaylistViewRoot"
+        android:scrollbars="none"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:elevation="4dp"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/videoPlayListMarzin"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/videoPlaylistViewMini"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoPlayListMarzin">
+
+            <RelativeLayout
+                android:layout_marginTop="1dp"
+                android:elevation="7dp"
+                android:background="@drawable/squer_desgin_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:id="@+id/vFull">
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="4dp"-->
+<!--                    android:id="@+id/lineDrawer"-->
+<!--                    android:background="@drawable/line"-->
+<!--                    android:layout_centerHorizontal="true"-->
+<!--                    android:layout_marginTop="4dp"/>-->
+
+                <TextView
+                    android:id="@+id/videoPlayListName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Title"
+                    android:text="PlayListName"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toLeftOf="@+id/dismisFullView"
+                    android:layout_marginTop="10dp"
+                    android:singleLine="true"/>
+
+                <ImageButton
+                    android:id="@+id/dismisFullView"
+                    style="@style/AppTheme.TransperentSquer.ImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_baseline_clear_24" />
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/btnlar"
+                   android:layout_below="@+id/videoPlayListName"
+                   android:orientation="horizontal">
+                   <ImageButton
+                       android:id="@+id/videoPlayOption"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       style="@style/AppTheme.TransperentCircule.ImageButton"
+                       android:src="@drawable/ic_baseline_repeat_24"
+                       android:layout_margin="10dp"/>
+               </LinearLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewVideoPlayList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/btnlar"
+                    android:elevation="7dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:elevation="4dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/video_playlist_min_background"
+                android:visibility="invisible"
+                android:id="@+id/vMini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_playlist_play_24"
+                    android:id="@+id/pl"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_up_24"
+                    android:id="@+id/rl"
+                    android:layout_alignParentRight="true"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dd"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@+id/rl"
+                    android:layout_toRightOf="@+id/pl">
+                    <TextView
+                        android:id="@+id/vPlayNextSongName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:text="Next Song is"/>
+
+                    <TextView
+                        android:id="@+id/videoPlaylistNameMini"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vPlayNextSongName"
+                        android:drawablePadding="4dp"
+                        android:singleLine="true"
+                        android:text="Meshup.6/4" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+

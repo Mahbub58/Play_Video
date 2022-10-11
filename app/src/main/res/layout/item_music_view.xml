@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="120dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:elevation="0dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/video_item_background"
+    android:layout_marginBottom="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/videoImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/image_1"
+                app:civ_border_color="@color/transperent"
+                app:civ_border_width="1dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/nameView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:elevation="2dp"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/VideoTitel"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/VideoMore"
+                        android:maxLines="3"
+                        android:textColor="@color/black"
+                        android:text=" Video Title video title video title video"
+                        android:textStyle="normal" />
+
+                    <ImageButton
+                        android:id="@+id/VideoMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        style="@style/AppTheme.TransperentCircule.ImageButton"
+                        app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+
+                    <TextView
+                        android:id="@+id/duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/VideoTitel"
+                        android:drawableLeft="@drawable/ic_baseline_access_time_24_black_white"
+                        android:drawablePadding="2dp"
+                        android:paddingRight="6dp"
+                        android:text="3:15"
+                        android:textColor="@color/black"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/VideoBody"
+                        style="@style/TextAppearance.AppCompat.Body1"
+                        android:textColor="@color/black_white"
+                        android:drawableLeft="@drawable/ic_baseline_folder_24"
+                        android:drawablePadding="2dp"
+                        android:layout_below="@id/duration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="Folder Name" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>

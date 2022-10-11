@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AudioPlay.inerLayout.SongQueList.AudioBottomSheetDialog_Fragment">
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottomsheet_background">
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_baseline_play_disabled_24"
+        android:id="@+id/playOption"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_transperent_circel"
+        tools:ignore="VectorDrawableCompat" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_baseline_library_add_24"
+        android:id="@+id/addList"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_transperent_circel"
+        tools:ignore="VectorDrawableCompat" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_baseline_queue_music_24"
+        android:id="@+id/remove"
+        android:layout_toLeftOf="@+id/addList"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_transperent_circel"
+        tools:ignore="VectorDrawableCompat" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_below="@+id/playOption"
+            android:layout_marginTop="20dp"
+            android:id="@+id/bottomSheetRecyclerView"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@color/white"
+
+             />
+</RelativeLayout>
+
+</RelativeLayout>

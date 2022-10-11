@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/audio_track_view"
+        android:text="English"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/black"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+
+</RelativeLayout>
