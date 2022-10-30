@@ -35,14 +35,16 @@
             android:name=".VideoPlayActivity.VideoPlayActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity android:name=".HomeActivity.Home">
+        <activity android:name=".HomeActivity.Home"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -57,7 +59,8 @@
 
         <receiver
             android:name=".NotiFication.NotificationRecever"
-            android:enabled="true">
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="NEXT" />
                 <action android:name="PREVIOUS" />
@@ -69,7 +72,8 @@
         </receiver>
         <receiver
             android:name=".AudioPlay.AudiouServices.MediaButtonEventReceiver"
-            android:enabled="true">
+            android:enabled="true"
+            android:exported="true">
             <intent-filter android:priority="2147483647">
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
                 <action android:name="NEXT" />
@@ -82,7 +86,8 @@
         </receiver>
         <receiver
             android:name=".AudioPlay.AudiouServices.HeadsetPlugInRecever"
-            android:enabled="true">
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.HEADSET_PLUG" />
                 <action android:name="NEXT" />
