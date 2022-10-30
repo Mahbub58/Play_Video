@@ -1,5 +1,6 @@
 package espritsoft.com.playvideo.AudioPlay.inerLayout.SongQueList;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupMenu;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -17,6 +20,10 @@ import java.util.ArrayList;
 import espritsoft.com.playvideo.Audio.AudiouModel;
 import espritsoft.com.playvideo.AudioPlay.AudioPlay;
 import espritsoft.com.playvideo.AudioPlay.AudiouServices.AudioPlaySystem;
+import espritsoft.com.playvideo.AudioPlay.inerLayout.SongQueList.AllSongList.SongListActivity;
+import espritsoft.com.playvideo.AudioPlay.inerLayout.SongQueList.AllSongList.SongListBootomFragment;
+import espritsoft.com.playvideo.AudioPlay.inerLayout.SongQueList.AllSongList.SonglistBottomFragmentAdaptor;
+import espritsoft.com.playvideo.HomeActivity.Home;
 import espritsoft.com.playvideo.R;
 
 /**
@@ -64,6 +71,7 @@ public class AudioBottomSheetDialog_Fragment extends BottomSheetDialogFragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        setStyle(BottomSheetDialogFragment.STYLE_NORMAL,R.style.CustomBottomSheetDialogTheme);
     }
 
 
@@ -85,6 +93,19 @@ public class AudioBottomSheetDialog_Fragment extends BottomSheetDialogFragment {
     AudioAdaptorBootomSheet audioAdaptor;
     RecyclerView bootomSheetRecyclerView;
     private void initializeLayout() {
+
+
+        view.findViewById(R.id.edit_list).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//               SongListBootomFragment songListBootomFragment =new SongListBootomFragment();
+//                songListBootomFragment.show(getActivity().getSupportFragmentManager(),"exampleBottomSheet");
+                startActivity(new Intent(Home.getInstance().getApplicationContext(), SongListActivity.class));
+                dismiss();
+            }
+        });
+
+
         bootomSheetRecyclerView=view.findViewById(R.id.bottomSheetRecyclerView);
 
 //         audioAdaptor = new AudioAdaptorBootomSheet(getContext(), ((Home) getActivity()).AudiouSongsList);
@@ -98,6 +119,10 @@ public class AudioBottomSheetDialog_Fragment extends BottomSheetDialogFragment {
         bootomSheetRecyclerView.addItemDecoration(spacingDecoration);
         AdaptorClicd();
     }
+
+
+
+
 
     void AdaptorClicd(){
         if(audioAdaptor!=null){
@@ -117,10 +142,34 @@ public class AudioBottomSheetDialog_Fragment extends BottomSheetDialogFragment {
                 }
 
                 @Override
-                public void menudialog(int position) {
-
+                public void menudialog(int position,View v) {
+                    OnPopUpMenuItem(v,position);
                 }
             });
         }
     }
+
+
+    void OnPopUpMenuItem(View view,int position){
+        PopupMenu popupMenu=new PopupMenu(getContext(),view);
+        popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.addSong:
+
+                        break;
+                    case R.id.removeSong:
+                        AudioPlaySystem.getInstance().queueList.remove(position);
+                        audioAdaptor.notifyDataSetChanged();
+                        break;
+                }
+
+                return true;
+            }
+        });
+        popupMenu.inflate(R.menu.que_list_menu);
+        popupMenu.show();
+    }
+
 }

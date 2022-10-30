@@ -82,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
-                    android:background="@drawable/circle_background_image"
+                    android:background="@drawable/btn_transperent_circel"
                     app:srcCompat="@drawable/ic_baseline_more_vert_24" />
 
             </RelativeLayout>

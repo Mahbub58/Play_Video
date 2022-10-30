@@ -11,6 +11,7 @@
     <color  name="red_white">#FFEBEE</color>
     <color  name="red_gray">#FF5252</color>
 
+    <color name="icon">#FFFFFF</color>
     <color name="black">#212121</color>
     <color name="black_gray">#424242</color>
     <color name="black_dark">#FF000000</color>
@@ -33,5 +34,6 @@
     <color name="white_shedow">#4DFFFFFF</color>
 
     <color name="icon_color_videoview">#E0E0E0</color>
+    <color name="icon2">#FFFFFF</color>
 
 </resources>

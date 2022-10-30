@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_baseline_play_disabled_24"
         android:id="@+id/playOption"
+        android:visibility="invisible"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/btn_transperent_circel"
@@ -24,24 +25,14 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_library_add_24"
-        android:id="@+id/addList"
+        app:srcCompat="@drawable/ic_outline_edit_note_24"
+        android:id="@+id/edit_list"
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dp"
         android:layout_marginTop="15dp"
         android:background="@drawable/btn_transperent_circel"
         tools:ignore="VectorDrawableCompat" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_baseline_queue_music_24"
-        android:id="@+id/remove"
-        android:layout_toLeftOf="@+id/addList"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/btn_transperent_circel"
-        tools:ignore="VectorDrawableCompat" />
 
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"

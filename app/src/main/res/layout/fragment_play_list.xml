@@ -26,31 +26,26 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save To .."
-            android:textAlignment="center"
+            android:text="Save to..."
             android:id="@+id/tt"
             style="@style/TextAppearance.AppCompat.Headline"
             android:textColor="@color/black"
             android:padding="5dp"
-            android:gravity="center_horizontal" />
+            android:layout_toLeftOf="@+id/createPlayList"
+            android:layout_marginLeft="10dp"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tt"
-
-            android:text="Create"
+            android:text="New Play List "
+            android:layout_marginRight="10dp"
+            android:textColor="#0086FE"
             android:id="@+id/createPlayList"
+            android:drawableLeft="@drawable/ic_baseline_add_24"
             android:background="@color/transperent"
             android:layout_alignParentRight="true"/>
 
-        <EditText
-            android:id="@+id/create_playListName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tt"
-            android:inputType="textCapCharacters"
-            android:layout_toLeftOf="@+id/createPlayList" />
+
     </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

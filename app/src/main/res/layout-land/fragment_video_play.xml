@@ -222,7 +222,7 @@
             android:padding="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:srcCompat="@drawable/ic_baseline_aspect_ratio_24"
+            app:srcCompat="@drawable/ic_merge"
             tools:ignore="VectorDrawableCompat" />
 
         <ImageButton

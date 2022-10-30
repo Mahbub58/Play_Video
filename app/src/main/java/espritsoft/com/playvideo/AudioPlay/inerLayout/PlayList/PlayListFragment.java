@@ -1,5 +1,7 @@
 package espritsoft.com.playvideo.AudioPlay.inerLayout.PlayList;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -26,6 +28,7 @@ import espritsoft.com.playvideo.AditionalClass.PlayListDataForSave;
 import espritsoft.com.playvideo.AudioPlay.AudiouServices.AudioPlaySystem;
 import espritsoft.com.playvideo.AudioPlay.inerLayout.SongQueList.SpacingDecoration;
 import espritsoft.com.playvideo.DBManager.DBManager_History;
+import espritsoft.com.playvideo.HomeActivity.Home;
 import espritsoft.com.playvideo.R;
 
 /**
@@ -107,18 +110,52 @@ public class PlayListFragment extends BottomSheetDialogFragment {
     private void initlayout() {
 
         recyclerViewPlayListItem=view.findViewById(R.id.bottomFragmentPlayListItem);
-        creat_palaylestName=view.findViewById(R.id.create_playListName);
+
         createPlayList=view.findViewById(R.id.createPlayList);
         done=view.findViewById(R.id.done);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getDialog().dismiss();
+            }
+        });
         createPlayList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String s=creat_palaylestName.getText().toString();
-                insertPlayListSongAtDBM(s);
+               CreatePlaylistDialog();
             }
         });
 
 
+    }
+
+
+
+
+    @SuppressLint("MissingInflatedId")
+    void CreatePlaylistDialog(){
+        AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
+        View view1=getLayoutInflater().inflate(R.layout.dialog_create_playlist,null);
+        builder.setView(view1);
+        AlertDialog dialog=builder.create();
+        EditText et=view1.findViewById(R.id.play_list_title);
+        view1.findViewById(R.id.ok).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String s=et.getText().toString();
+                if(!s.isEmpty()) {
+                    insertPlayListSongAtDBM(s);
+                    dialog.dismiss();
+                }
+            }
+        });
+        view1.findViewById(R.id.cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
 
@@ -145,7 +182,6 @@ public class PlayListFragment extends BottomSheetDialogFragment {
                     ,PlayListItem.get(p).getPlayListCover(),String.valueOf(totalV)
                     ,PlayListItem.get(p).getPlayList_song_path(),PlayListItem.get(p).getSong_name()));
         }
-
 
         for (int i = 1; i < PlayListItem.size(); i++) {
             String a1 = PlayListItem.get(i).getPlayListName();
@@ -197,7 +233,6 @@ public class PlayListFragment extends BottomSheetDialogFragment {
             do {
 
                 //adaptor
-
                 PlayListItem.add(new ModulPlayListItem(
                         cursor.getString(cursor.getColumnIndex(DBManager_History.playl_list_name)),
                         cursor.getString(cursor.getColumnIndex(DBManager_History.song_album_cover)),

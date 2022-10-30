@@ -349,7 +349,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/btn_transperent_circel"
+        android:background="@drawable/btn_transperent_squer"
         app:srcCompat="@drawable/ic_baseline_play_arrow_black_24"
         app:layout_constraintRight_toLeftOf="@id/miniViewDismisMusic"
         app:layout_constraintTop_toTopOf="parent" />
@@ -359,7 +359,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/btn_transperent_circel"
+        android:background="@drawable/btn_transperent_squer"
         app:srcCompat="@drawable/ic_baseline_clear_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

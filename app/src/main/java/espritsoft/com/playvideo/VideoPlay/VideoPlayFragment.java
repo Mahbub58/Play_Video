@@ -220,6 +220,7 @@ public class VideoPlayFragment extends Fragment implements PlayAction {
     ConstraintLayout viBack,rootVideoContiner;
     Guideline guidelineBootom,guidelineTop,guidelineRight,guidelineLeft;
     ImageButton skep10sec,previous10sec;
+    ImageButton videoScreenSize;
     private void iniTializeLayout() {
          videoView=view.findViewById(R.id.videoView);
 
@@ -330,7 +331,7 @@ public class VideoPlayFragment extends Fragment implements PlayAction {
         paramsTop=(ConstraintLayout.LayoutParams)guidelineTop.getLayoutParams();
         paramsBottom=(ConstraintLayout.LayoutParams)guidelineBootom.getLayoutParams();
 
-        ImageButton videoScreenSize = view.findViewById(R.id.videoScreensize);
+        videoScreenSize = view.findViewById(R.id.videoScreensize);
         videoScreenSize.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -506,12 +507,14 @@ public class VideoPlayFragment extends Fragment implements PlayAction {
             guidelineTop.setLayoutParams(paramsTop);
             paramsBottom.guidePercent = 1f;
             guidelineBootom.setLayoutParams(paramsBottom);
+            videoScreenSize.setImageResource(R.drawable.ic_merge);
             i_state = 1;
         } else if(i_state==1) {
             paramsRight.guidePercent = 0.65f;
             guidelineRight.setLayoutParams(paramsRight);
             paramsLeft.guidePercent = 0.35f;
             guidelineLeft.setLayoutParams(paramsLeft);
+            videoScreenSize.setImageResource(R.drawable.ic_minimize);
             i_state=2;
         }else if(i_state==2){
             paramsRight.guidePercent = 1f;
@@ -522,6 +525,7 @@ public class VideoPlayFragment extends Fragment implements PlayAction {
             guidelineTop.setLayoutParams(paramsTop);
             paramsBottom.guidePercent = 0.9f;
             guidelineBootom.setLayoutParams(paramsBottom);
+            videoScreenSize.setImageResource(R.drawable.ic_full_screen);
             i_state=3;
         }else if(i_state==3) {
             paramsRight.guidePercent = 0.9f;
@@ -532,6 +536,7 @@ public class VideoPlayFragment extends Fragment implements PlayAction {
             guidelineTop.setLayoutParams(paramsTop);
             paramsBottom.guidePercent = 0.9f;
             guidelineBootom.setLayoutParams(paramsBottom);
+            videoScreenSize.setImageResource(R.drawable.ic_maximize);
             i_state = 0;
         }
 

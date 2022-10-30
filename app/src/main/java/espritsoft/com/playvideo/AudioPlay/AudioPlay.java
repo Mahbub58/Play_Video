@@ -321,7 +321,7 @@ public class AudioPlay extends Fragment implements ActionPlaying, ServiceConnect
     private void checkVideOrAudio() {
         String pth=AudioPlaySystem.getInstance().SongUri;
         String ex=pth.substring(pth.indexOf("."));
-        if(!ex.equals(".mp3"))videoShow.setVisibility(View.VISIBLE);else videoShow.setVisibility(View.INVISIBLE);
+        if(!ex.equals(".mp3")&&!ex.equals(".aac")&&!ex.equals(".wav")&&!ex.equals(".pcm")&&!ex.equals(".m4a"))videoShow.setVisibility(View.VISIBLE);else videoShow.setVisibility(View.INVISIBLE);
     }
 
     private void checkPlayOption() {

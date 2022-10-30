@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="espritsoft.com.playvideo">
 
-
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
-
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -26,9 +24,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PlayVideo">
         <activity
+            android:name=".AudioPlay.inerLayout.SongQueList.AllSongList.SongListActivity"
+            android:theme="@style/StatusBarTheme"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".VideoPlayActivity.VideoPlayActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity android:name=".HomeActivity.Home">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
@@ -56,37 +62,37 @@
                 <action android:name="NEXT" />
                 <action android:name="PREVIOUS" />
                 <action android:name="PLAY" />
-                <action android:name="PAUSE"/>
-                <action android:name="PLAY_PAUSE"/>
-                <action android:name="DISMIS"/>
+                <action android:name="PAUSE" />
+                <action android:name="PLAY_PAUSE" />
+                <action android:name="DISMIS" />
             </intent-filter>
         </receiver>
-
-        <receiver android:name=".AudioPlay.AudiouServices.MediaButtonEventReceiver"
+        <receiver
+            android:name=".AudioPlay.AudiouServices.MediaButtonEventReceiver"
             android:enabled="true">
             <intent-filter android:priority="2147483647">
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
                 <action android:name="NEXT" />
                 <action android:name="PREVIOUS" />
                 <action android:name="PLAY" />
-                <action android:name="PLAY_PAUSE"/>
-                <action android:name="DISMIS"/>
-                <action android:name="PAUSE"/>
+                <action android:name="PLAY_PAUSE" />
+                <action android:name="DISMIS" />
+                <action android:name="PAUSE" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".AudioPlay.AudiouServices.HeadsetPlugInRecever"
+        <receiver
+            android:name=".AudioPlay.AudiouServices.HeadsetPlugInRecever"
             android:enabled="true">
             <intent-filter>
-                <action android:name="android.intent.action.HEADSET_PLUG"/>
+                <action android:name="android.intent.action.HEADSET_PLUG" />
                 <action android:name="NEXT" />
                 <action android:name="PREVIOUS" />
                 <action android:name="PLAY" />
-                <action android:name="PAUSE"/>
-                <action android:name="PLAY_PAUSE"/>
-                <action android:name="DISMIS"/>
+                <action android:name="PAUSE" />
+                <action android:name="PLAY_PAUSE" />
+                <action android:name="DISMIS" />
             </intent-filter>
         </receiver>
-
     </application>
 
 </manifest>

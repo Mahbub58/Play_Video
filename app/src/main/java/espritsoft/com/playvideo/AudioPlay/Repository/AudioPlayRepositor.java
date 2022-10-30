@@ -151,7 +151,7 @@ public class AudioPlayRepositor {
                     String folderName=recpints[recpints.length-2];
                     if(folderName.equals(seclectedFolder)) {
                         if (duration1 > 0.0)
-                            AudioPlaySystem.getInstance().queueList.add(new AudiouModel(fullpath, song_name, album_name, artist_name, albumArtUriImage, second, minute, hour, folderName));
+                            AudioPlaySystem.getInstance().queueList.add(new AudiouModel(fullpath, song_name, folderName, artist_name, albumArtUriImage, second, minute, hour, folderName));
                     }
                 } while (cursor.moveToNext());
             }

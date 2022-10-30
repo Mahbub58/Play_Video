@@ -68,7 +68,7 @@ public class AudioAdaptorBootomSheet extends RecyclerView.Adapter<AudioAdaptorBo
 
     public interface OnItemClickListner{
         void onItemClick(int position);
-        void menudialog(int position);
+        void menudialog(int position,View v);
     }
 
     public void setOnItemClickListner(OnItemClickListner listner){
@@ -211,7 +211,7 @@ public class AudioAdaptorBootomSheet extends RecyclerView.Adapter<AudioAdaptorBo
                     if(mListner!=null){
                         int position=getAdapterPosition();
                         if(position!=RecyclerView.NO_POSITION){
-                            mListner.menudialog(position);
+                            mListner.menudialog(position,v);
                         }
                     }
 

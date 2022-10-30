@@ -599,86 +599,87 @@ public class Home extends AppCompatActivity implements BottomNavigationView.OnNa
                          VideoPlayFragment.getInstance().videoBackHide();
                         //VideoPlayFragment.getInstance().videoBackOpenDismis(true);
 
+                        int orientation =getResources().getConfiguration().orientation;
+                        if (orientation != Configuration.ORIENTATION_LANDSCAPE) {
 
-                        varticalPersentage = (event.getRawY() + dY) / Float.valueOf(deviceheight);
+                            varticalPersentage = (event.getRawY() + dY) / Float.valueOf(deviceheight);
 
-                        directionY = (event.getRawY() + dY) / Float.valueOf(deviceheight);
-                        directionLX= (event.getRawX() + dX) / Float.valueOf(deviceWegt);
-                        directionX=(event.getRawY() + dY) / Float.valueOf(deviceheight)-0.35f;
+                            directionY = (event.getRawY() + dY) / Float.valueOf(deviceheight);
+                            directionLX = (event.getRawX() + dX) / Float.valueOf(deviceWegt);
+                            directionX = (event.getRawY() + dY) / Float.valueOf(deviceheight) - 0.35f;
 //
 
-                        if(directionY>=percentHorizontal && directionLX>=varticalPercentage){
-                            directionYIsNotActive=true;
-                            directionYIsProces=true;
-                        }
-
-                        if(directionYIsProces){
-                            if(directionLX<=0.03){
-                                frameVideoContainerRemove=true;
-                            }else{
-                                frameVideoContainerRemove=false;
+                            if (directionY >= percentHorizontal && directionLX >= varticalPercentage) {
+                                directionYIsNotActive = true;
+                                directionYIsProces = true;
                             }
 
-                            //XLeft Marzin remove
-                            if(directionLX <= 0.42){
-                                paramsVartical.guidePercent = directionLX; // 45% // range: 0 <-> 1
-                                guidelineVertical.setLayoutParams(paramsVartical);
-
-                                if(directionLX+0.60f<=0.97) {
-                                    paramsMarzinEnd.guidePercent = directionLX + 0.60f; // 45% // range: 0 <-> 1
-                                    guidelineMarginEnd.setLayoutParams(paramsMarzinEnd);
+                            if (directionYIsProces) {
+                                if (directionLX <= 0.03) {
+                                    frameVideoContainerRemove = true;
+                                } else {
+                                    frameVideoContainerRemove = false;
                                 }
 
-                                directionYIsNotActive=false;
+                                //XLeft Marzin remove
+                                if (directionLX <= 0.42) {
+                                    paramsVartical.guidePercent = directionLX; // 45% // range: 0 <-> 1
+                                    guidelineVertical.setLayoutParams(paramsVartical);
 
+                                    if (directionLX + 0.60f <= 0.97) {
+                                        paramsMarzinEnd.guidePercent = directionLX + 0.60f; // 45% // range: 0 <-> 1
+                                        guidelineMarginEnd.setLayoutParams(paramsMarzinEnd);
+                                    }
+
+                                    directionYIsNotActive = false;
+
+                                }
                             }
-                        }
 
-                        float i=directionYH-directionY;
-                        if (i<0 || 0<i) {
-
+                            float i = directionYH - directionY;
+                            if (i < 0 || 0 < i) {
 
 
-                        if(directionYIsNotActive) {
+                                if (directionYIsNotActive) {
 
 //                            if(directionY<0.67 && directionY>0.66)
 //                            directionYIsProces=false;
-                            //hight
-                            if (directionY < 0.68) {
-                                paramsHorizantal.guidePercent = directionY; // 45% // range: 0 <-> 1
-                                guidelineHorizontal.setLayoutParams(paramsHorizantal);
-                                directionYIsProces=false;
-                            }
-                            //wightt
-                            if (directionX <= 0.42 && directionX >= 0.0) {
-                                paramsVartical.guidePercent = directionX; // 45% // range: 0 <-> 1
-                                guidelineVertical.setLayoutParams(paramsVartical);
-                            }
-                            //weght end
-                            if (directionX <= 0.0) {
-                                float endX = 0.97f - directionX;
-                                if (endX >= 0.97f && endX <= 1.1f) {
-                                    paramsMarzinEnd.guidePercent = endX; // 45% // range: 0 <-> 1
-                                    guidelineMarginEnd.setLayoutParams(paramsMarzinEnd);
+                                    //hight
+                                    if (directionY < 0.68) {
+                                        paramsHorizantal.guidePercent = directionY; // 45% // range: 0 <-> 1
+                                        guidelineHorizontal.setLayoutParams(paramsHorizantal);
+                                        directionYIsProces = false;
+                                    }
+                                    //wightt
+                                    if (directionX <= 0.42 && directionX >= 0.0) {
+                                        paramsVartical.guidePercent = directionX; // 45% // range: 0 <-> 1
+                                        guidelineVertical.setLayoutParams(paramsVartical);
+                                    }
+                                    //weght end
+                                    if (directionX <= 0.0) {
+                                        float endX = 0.97f - directionX;
+                                        if (endX >= 0.97f && endX <= 1.1f) {
+                                            paramsMarzinEnd.guidePercent = endX; // 45% // range: 0 <-> 1
+                                            guidelineMarginEnd.setLayoutParams(paramsMarzinEnd);
 
+                                        }
+                                    }
+                                    //bottom Y
+                                    float Ybotom = 1.3f - directionY;
+                                    if (Ybotom >= 0.91 && Ybotom <= 1.1) {
+                                        paramsBottom.guidePercent = Ybotom; // 45% // range: 0 <-> 1
+                                        guidelineBottom.setLayoutParams(paramsBottom);
+                                    }
+
+                                    // visible FramDetailsContainer
+                                    float YVisable = 0.5f - directionY;
+                                    if (YVisable > 0.0 && YVisable < 1.0) {
+                                        frmDetailsContainer.setAlpha(YVisable + 0.6f);
+                                    }
                                 }
-                            }
-                            //bottom Y
-                            float Ybotom = 1.3f - directionY;
-                            if (Ybotom >= 0.91 && Ybotom <= 1.1) {
-                                paramsBottom.guidePercent = Ybotom; // 45% // range: 0 <-> 1
-                                guidelineBottom.setLayoutParams(paramsBottom);
-                            }
 
-                            // visible FramDetailsContainer
-                            float YVisable =0.5f-directionY;
-                            if (YVisable > 0.0 && YVisable < 1.0) {
-                                frmDetailsContainer.setAlpha(YVisable+0.6f);
                             }
                         }
-
-                        }
-
 
 
 //                        if(percentHorizontal<0.40  && directionYIsNotActive) {
