@@ -36,6 +36,7 @@ import androidx.lifecycle.ViewModelProviders;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import espritsoft.com.playvideo.Audio.AudiouModel;
 import espritsoft.com.playvideo.AudioPlay.AudioPlay;
@@ -91,7 +92,7 @@ public class AudioPlaySystem extends Service implements MediaPlayer.OnCompletion
     @Override
     public void PlayPause() {
         if(mediaPlayer.isPlaying()){
-            pauseMedia();
+            Pause();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 showNotification(R.drawable.ic_baseline_play_arrow_black_24,true);
             }
@@ -109,12 +110,18 @@ public class AudioPlaySystem extends Service implements MediaPlayer.OnCompletion
     @Override
     public void Dismis() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            pauseMedia();
+//            pauseMedia();
             showNotification(R.drawable.ic_baseline_play_arrow_black_24,false);
         }
         audioService=false;
-//        Intent intent=new Intent(this,AudioPlaySystem.class);
-//        stopService(intent);
+        if (mediaPlayer != null ) {
+            if(mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
+            }
+            mediaPlayer.stop();
+            mediaPlayer.release();
+        }
+
     }
 
     @Override
@@ -187,7 +194,7 @@ public class AudioPlaySystem extends Service implements MediaPlayer.OnCompletion
     public void onPrepared(MediaPlayer mp) {
         //Invoked when the media source is ready for playback.
         //Invoked when the media source is ready for playback.
-        playMedia();
+        Play();
     }
 
     @Override
@@ -322,11 +329,12 @@ public class AudioPlaySystem extends Service implements MediaPlayer.OnCompletion
     }
 
     public  void stopMedia() {
-        if (mediaPlayer == null) return;
-        if (mediaPlayer.isPlaying()) {
+
+        if (mBinder != null) {
             mediaPlayer.stop();
             mediaPlayer.release();
         }
+        if (mediaPlayer == null) return;
     }
 
     public  void pauseMedia() {
@@ -532,7 +540,7 @@ private BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
     @Override
     public void onReceive(Context context, Intent intent) {
         //pause audio on ACTION_AUDIO_BECOMING_NOISY
-        pauseMedia();
+        Pause();
        // buildNotification(PlaybackStatus.PAUSED);
 
         Toast.makeText(context, "inside reciver", Toast.LENGTH_SHORT).show();
@@ -549,7 +557,7 @@ private BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
             case KeyEvent.KEYCODE_HEADSETHOOK:
             case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:
                 // pause music
-                pauseMedia();
+                Pause();
                 break;
             case KeyEvent.KEYCODE_MEDIA_NEXT:
                 // next track
@@ -591,7 +599,7 @@ private BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
                     case TelephonyManager.CALL_STATE_OFFHOOK:
                     case TelephonyManager.CALL_STATE_RINGING:
                         if (mediaPlayer != null) {
-                            pauseMedia();
+                            Pause();
                             ongoingCall = true;
                         }
                         break;
@@ -720,6 +728,17 @@ private BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
             AudioPlay();
             AudioPlay.getInstance().audioPlay();
         }else if(saveData.LoadData() == 2){
+            final int min = 0;
+            final int max = queueList.size();
+            final int random = new Random().nextInt((max - min) + 1) + min;
+            AudioPlaySystem.getInstance().SongUri = queueList.get(random).getPath();
+            AudioPlaySystem.getInstance().AlbumCover = queueList.get(random).getAlbumArtUriImage();
+            AudioPlaySystem.getInstance().SongName = queueList.get(random).getSong_name();
+            AudioPlaySystem.getInstance().SongAlbam = queueList.get(random).getAlbam_name();
+            AudioPlaySystem.getInstance().SongDuration =  queueList.get(random).getHour() + ":" +queueList.get(random).getMunite() + ":" +
+                    queueList.get(random).getSecond();
+            AudioPlay();
+            AudioPlay.getInstance().audioPlay();
 
         }else if(saveData.LoadData() == 3){
             if (songCurentPosition < queueList.size() - 1) {
@@ -731,9 +750,10 @@ private BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
                 AudioPlaySystem.getInstance().SongDuration =  queueList.get(songCurentPosition).getHour() + ":" +queueList.get(songCurentPosition).getMunite() + ":" +
                         queueList.get(songCurentPosition).getSecond();
                 AudioPlay();
-                AudioPlay.getInstance().audioPlay();
+//                AudioPlay.getInstance().audioPlay();
+                Play();
             } else {
-                stopMedia();
+                Dismis();
             }
         }
     }
@@ -745,7 +765,7 @@ private BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
     public void onDestroy() {
         super.onDestroy();
         if (mediaPlayer != null) {
-            stopMedia();
+            Dismis();
             mediaPlayer.release();
         }
         //removeAudioFocus();

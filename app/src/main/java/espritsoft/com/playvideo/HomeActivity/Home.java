@@ -85,7 +85,7 @@ import espritsoft.com.playvideo.VideoPlay.VideoPlayFragment;
 
 
 
-public class Home extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+public class Home extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener,ActionPlaying{
 
     public static boolean fl=true;
 
@@ -990,7 +990,8 @@ public class Home extends AppCompatActivity implements BottomNavigationView.OnNa
         }
 
         try{
-            AudioPlaySystem.getInstance().pauseMedia();
+//            AudioPlaySystem.getInstance().pauseMedia();
+            Pause();
             frm_audio_container.setVisibility(View.INVISIBLE);
             audiouOpen="ideal";
         }catch (Exception e){}
@@ -2209,5 +2210,33 @@ public class Home extends AppCompatActivity implements BottomNavigationView.OnNa
     };
 
 
+    @Override
+    public void nextClick() {
 
+    }
+
+    @Override
+    public void previousClick() {
+
+    }
+
+    @Override
+    public void PlayPause() {
+
+    }
+
+    @Override
+    public void Dismis() {
+
+    }
+
+    @Override
+    public void Pause() {
+
+    }
+
+    @Override
+    public void Play() {
+
+    }
 }

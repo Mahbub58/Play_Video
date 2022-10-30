@@ -232,7 +232,7 @@ public class AudioFragment extends Fragment    {
                     AudioPlaySystem.getInstance().SongUri=audiouModel.getPath();
                     AudioPlaySystem.getInstance().AlbumCover=audiouModel.getAlbumArtUriImage();
                     AudioPlaySystem.getInstance().SongName=audiouModel.getSong_name();
-                    AudioPlaySystem.getInstance().SongAlbam=audiouModel.getAlbam_name();
+                    AudioPlaySystem.getInstance().SongAlbam=audiouModel.getFolderName();
                     AudioPlaySystem.getInstance().SongDuration=audiouModel.getHour()+":"+audiouModel.getMunite()+":"+
                             audiouModel.getSecond() ;
 

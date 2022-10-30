@@ -166,6 +166,7 @@ public class AudioPlay extends Fragment implements ActionPlaying, ServiceConnect
             public void onClick(View v) {
                 try {
                    AudioPlaySystem.getInstance().pauseMedia();
+//                    Dismis();
                     Home.getInstance().audiouOpen="ideal";
                 }catch (Exception e){
                     e.printStackTrace();
@@ -573,12 +574,13 @@ public class AudioPlay extends Fragment implements ActionPlaying, ServiceConnect
 
     @Override
     public void Play() {
-        if(!AudioPlaySystem.getInstance().mediaPlayer.isPlaying()){
-            AudioPlaySystem.getInstance().playMedia();
-            playPausMusic.setImageResource(R.drawable.ic_baseline_pause_black_44);
-            btnMiniPlaypauseMusic.setImageResource(R.drawable.ic_baseline_pause_black_24);
-            audioIsPlaying="playing";
-        }
+//        if(!AudioPlaySystem.getInstance().mediaPlayer.isPlaying()){
+//            AudioPlaySystem.getInstance().playMedia();
+//            playPausMusic.setImageResource(R.drawable.ic_baseline_pause_black_44);
+//            btnMiniPlaypauseMusic.setImageResource(R.drawable.ic_baseline_pause_black_24);
+//            audioIsPlaying="playing";
+//        }
+        audioPlay();
     }
 
     AudioPlaySystem audioPlaySystem;
