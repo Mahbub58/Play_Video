@@ -89,7 +89,7 @@ public class AudiouPlayViewModel extends AndroidViewModel {
             @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                AccessFilePermission(context);
+//                AccessFilePermission(context);
                 switch (item.getItemId()){
                     case R.id.addToPlayList:
                         AddSongInPlayListVideoModel(audiouModel,fragmentManager);

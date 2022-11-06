@@ -164,17 +164,6 @@ public class AudioPlay extends Fragment implements ActionPlaying, ServiceConnect
         miniviewDismis.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try {
-                   AudioPlaySystem.getInstance().pauseMedia();
-//                    Dismis();
-                    Home.getInstance().audiouOpen="ideal";
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
-                Home.getInstance().videoPlayIsActive="ideal";
-                isExpandAudiouView(true);
-                musicRootContainer.setVisibility(View.INVISIBLE);
-
                 Dismis();
             }
         });
@@ -213,7 +202,7 @@ public class AudioPlay extends Fragment implements ActionPlaying, ServiceConnect
         playPausMusic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               PlayPause();
+              PlayPause();
 
             }
         });
@@ -322,7 +311,9 @@ public class AudioPlay extends Fragment implements ActionPlaying, ServiceConnect
     private void checkVideOrAudio() {
         String pth=AudioPlaySystem.getInstance().SongUri;
         String ex=pth.substring(pth.indexOf("."));
-        if(!ex.equals(".mp3")&&!ex.equals(".aac")&&!ex.equals(".wav")&&!ex.equals(".pcm")&&!ex.equals(".m4a"))videoShow.setVisibility(View.VISIBLE);else videoShow.setVisibility(View.INVISIBLE);
+        if(!ex.equals(".mp3")&&!ex.equals(".aac")&&!ex.equals(".wav")&&!ex.equals(".pcm")&&!ex.equals(".m4a"))
+            videoShow.setVisibility(View.VISIBLE);
+        else videoShow.setVisibility(View.INVISIBLE);
     }
 
     private void checkPlayOption() {
@@ -449,13 +440,11 @@ public class AudioPlay extends Fragment implements ActionPlaying, ServiceConnect
         audioDuration.setText(AudioPlaySystem.getInstance().SongDuration);
         checkVideOrAudio();
     }
-    //=========================== seekBar
+
+
     //=========================== SeekBar==========
-
     public void updateSeekBar() {
-
-        handler.postDelayed(UpdateTimeTask,1000);
-
+            handler.postDelayed(UpdateTimeTask, 1000);
     }
     public Runnable UpdateTimeTask=new Runnable() {
         @Override
@@ -543,12 +532,12 @@ public class AudioPlay extends Fragment implements ActionPlaying, ServiceConnect
     @Override
     public void PlayPause() {
         if(AudioPlaySystem.getInstance().mediaPlayer.isPlaying()){
-            AudioPlaySystem.getInstance().pauseMedia();
+            AudioPlaySystem.getInstance().PlayPause();
             playPausMusic.setImageResource(R.drawable.ic_baseline_play_arrow_black_44);
             btnMiniPlaypauseMusic.setImageResource(R.drawable.ic_baseline_play_arrow_black_24);
             audioIsPlaying="pause";
         }else{
-            AudioPlaySystem.getInstance().playMedia();
+            AudioPlaySystem.getInstance().PlayPause();
             playPausMusic.setImageResource(R.drawable.ic_baseline_pause_black_44);
             btnMiniPlaypauseMusic.setImageResource(R.drawable.ic_baseline_pause_black_24);
             audioIsPlaying="playing";
@@ -559,7 +548,16 @@ public class AudioPlay extends Fragment implements ActionPlaying, ServiceConnect
     @Override
     public void Dismis() {
         AudioPlaySystem.getInstance().Dismis();
-        audioIsPlaying="pause";
+
+        if(Home.getInstance().audiouOpen.equals("Expended")){
+            Home.getInstance().onBackPressed();
+        }
+            audioIsPlaying="pause";
+//        getActivity().stopService(new Intent(getActivity(),AudioPlaySystem.class));
+        Home.getInstance().videoPlayIsActive="ideal";
+        isExpandAudiouView(false);
+        musicRootContainer.setVisibility(View.INVISIBLE);
+        Home.getInstance().audiouOpen="ideal";
     }
 
     @Override

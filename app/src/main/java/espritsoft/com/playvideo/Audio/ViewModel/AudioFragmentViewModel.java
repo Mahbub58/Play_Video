@@ -88,7 +88,7 @@ public class AudioFragmentViewModel extends AndroidViewModel {
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                AccessFilePermission(context);
+//                AccessFilePermission(context);
                 switch (item.getItemId()){
                     case R.id.addToPlayList:
                         AddSongInPlayList(audiouModel,fragmentManager);

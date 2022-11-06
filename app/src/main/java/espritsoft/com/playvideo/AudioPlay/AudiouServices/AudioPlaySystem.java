@@ -92,17 +92,19 @@ public class AudioPlaySystem extends Service implements MediaPlayer.OnCompletion
     @Override
     public void PlayPause() {
         if(mediaPlayer.isPlaying()){
-            Pause();
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 showNotification(R.drawable.ic_baseline_play_arrow_black_24,true);
             }
-            //musicPlayerIsPlaing=false;
+            Pause();
+//            musicPlayerIsPlaing=false;
 
         }else{
-            AudioPlaySystem.getInstance().playMedia();
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 showNotification(R.drawable.ic_baseline_pause_black_24,true);
             }
+            playMedia();
             // musicPlayerIsPlaing=true;
         }
     }
@@ -118,9 +120,10 @@ public class AudioPlaySystem extends Service implements MediaPlayer.OnCompletion
             if(mediaPlayer.isPlaying()) {
                 mediaPlayer.pause();
             }
-            mediaPlayer.stop();
-            mediaPlayer.release();
+//            mediaPlayer.stop();
+//            mediaPlayer.release();
         }
+        removeAudioFocus();
 
     }
 
@@ -423,8 +426,6 @@ public int onStartCommand(Intent intent, int flags, int startId) {
                 case ACTION_NEXT:
                     if(actionPlaying !=null){
                         actionPlaying.nextClick();
-                        Toast.makeText(getApplicationContext(),"next",Toast.LENGTH_SHORT).show();
-                        Log.d("msg","name=Click= "+actionName);
                     }
                     break;
                 case ACTION_PREV:
@@ -490,7 +491,10 @@ String TAG;
 
         Bitmap picture = null;
         String  recpintList=SongUri;
-        String extension = recpintList.substring(recpintList.lastIndexOf("."));
+        try{
+            String extension = recpintList.substring(recpintList.lastIndexOf("."));
+
+
         if(extension.equals(".mp4")){
             MediaMetadataRetriever media = new MediaMetadataRetriever();
             media.setDataSource(SongUri);
@@ -504,7 +508,9 @@ String TAG;
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         }
+        }catch (Exception e){}
 
 
 
@@ -543,8 +549,6 @@ private BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
         Pause();
        // buildNotification(PlaybackStatus.PAUSED);
 
-        Toast.makeText(context, "inside reciver", Toast.LENGTH_SHORT).show();
-
         final KeyEvent event = (KeyEvent) intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT);
         if (event.getAction() != KeyEvent.ACTION_DOWN) return;
 
@@ -557,7 +561,7 @@ private BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
             case KeyEvent.KEYCODE_HEADSETHOOK:
             case KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE:
                 // pause music
-                Pause();
+                PlayPause();
                 break;
             case KeyEvent.KEYCODE_MEDIA_NEXT:
                 // next track
@@ -577,7 +581,7 @@ private BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
         //register after getting audio focus
         IntentFilter intentFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
         registerReceiver(becomingNoisyReceiver, intentFilter);
-        Toast.makeText(context, "inside", Toast.LENGTH_SHORT).show();
+
     }
 
 

@@ -183,8 +183,13 @@ public class Home extends AppCompatActivity implements BottomNavigationView.OnNa
                 parmsAudioVartical.guidePercent = 0.83F; // 45% // range: 0 <-> 1
                 guidline_musicView.setLayoutParams(parmsAudioVartical);
             }
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    AudioPlay.getInstance().isExpandAudiouView(false);
+                }
+            },100);
 
-           AudioPlay.getInstance().isExpandAudiouView(false);
            audiouOpen="down";
 
             /**
@@ -2035,6 +2040,7 @@ public class Home extends AppCompatActivity implements BottomNavigationView.OnNa
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                     AudioFremmSizeIsExpendet(true);
                     AudioContainerMove();
+
                 }
             }else if(audiouOpen.equals("down")){
                 frm_audio_container.setVisibility(View.VISIBLE);
@@ -2227,6 +2233,8 @@ public class Home extends AppCompatActivity implements BottomNavigationView.OnNa
 
     @Override
     public void Dismis() {
+
+        Toast.makeText(getApplicationContext(),"hhh",Toast.LENGTH_SHORT).show();
 
     }
 

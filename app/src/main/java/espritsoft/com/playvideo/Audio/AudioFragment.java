@@ -239,9 +239,10 @@ public class AudioFragment extends Fragment    {
 
                     AudioPlaySystem.getInstance().songProgress=0;
                     audioFragmentViewModel.GetQueuSongList(audiouModel.getFolderName());
-                    ((Home)getActivity()).PlayAudio();
+
                     //  ((Home)getActivity()).AudiouQueueList();
 
+                    ((Home)getActivity()).PlayAudio();
                     AudioPlaySystem.getInstance().AudioPlay();
 
                 }
